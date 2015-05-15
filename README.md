@@ -1,6 +1,8 @@
 # Ether Gallery
 A gallery plugin for jQuery
 
+[**Demo**](http://ethercreative.github.io/ether-gallery/)
+
 ### Example HTML Markup
 ```html
 <ul class="gallery">
