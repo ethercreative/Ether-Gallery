@@ -1,0 +1,97 @@
+.egal-overlay,
+.egal-ul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
+.egal-overlay {
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 998;
+}
+.egal-ul {
+  z-index: 999;
+}
+.egal-ul li {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -5%;
+  z-index: 1;
+  width: 5%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
+.egal-ul li div {
+  text-align: center;
+  max-width: 100%;
+}
+.egal-ul li img {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+}
+.egal-ul li.egal-after-next {
+  left: 100%;
+  z-index: -1;
+}
+.egal-ul li.egal-next,
+.egal-ul li.egal-prev,
+.egal-ul li.egal-active {
+  opacity: 1;
+}
+.egal-ul li.egal-prev,
+.egal-ul li.egal-next {
+  cursor: pointer;
+}
+.egal-ul li.egal-prev:hover,
+.egal-ul li.egal-next:hover {
+  width: 7%;
+}
+.egal-ul li.egal-prev {
+  left: 0;
+}
+.egal-ul li.egal-next {
+  left: 95%;
+}
+.egal-ul li.egal-next:hover {
+  left: 93%;
+}
+.egal-ul li.egal-active {
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+.egal-open {
+  overflow: hidden;
+}
+.egal-open .egal-overlay,
+.egal-open .egal-ul {
+  opacity: 1;
+}
+.egal-open .egal-overlay,
+.egal-open .egal-ul * {
+  pointer-events: all;
+}

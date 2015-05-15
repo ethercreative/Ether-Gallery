@@ -1,0 +1,109 @@
+.egal-overlay,
+.egal-ul {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	overflow: hidden;
+
+	opacity: 0;
+	pointer-events: none;
+
+	transition: all 0.5s ease-in-out;
+}
+
+.egal-overlay {
+	background: rgba(0,0,0,0.8);
+	z-index: 998;
+}
+
+.egal-ul {
+	z-index: 999;
+
+	li {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -5%;
+		z-index: 1;
+
+		width: 5%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		opacity: 0;
+
+		transition: all 0.5s ease-in-out;
+
+		div {
+			text-align: center;
+			max-width: 100%;
+		}
+
+		img {
+			width: auto;
+			height: auto;
+			max-width: 90%;
+			max-height: 90%;
+		}
+
+		&.egal-after-next {
+			left: 100%;
+			z-index: -1;
+		}
+
+		&.egal-next,
+		&.egal-prev,
+		&.egal-active {
+			opacity: 1;
+		}
+
+		&.egal-prev,
+		&.egal-next {
+			cursor: pointer;
+
+			&:hover {
+				width: 7%;
+			}
+		}
+
+		&.egal-prev {
+			left: 0;
+		}
+
+		&.egal-next {
+			left: 95%;
+
+			&:hover {
+				left: 93%;
+			}
+		}
+
+		&.egal-active {
+			width: 100%;
+			left: 0;
+			right: 0;
+			z-index: 3;
+
+			pointer-events: none;
+		}
+	}
+}
+
+.egal-open {
+	overflow: hidden;
+
+	.egal-overlay,
+	.egal-ul {
+		opacity: 1;
+	}
+
+	.egal-overlay,
+	.egal-ul * {
+		pointer-events: all;
+	}
+}
