@@ -44,7 +44,7 @@ $('.gallery').etherGallery({
 - `.egal-after-next` All list items after the next list item
 
 
-### Information
+### Lazy Loading
 The images are loaded in as their list item becomes the `.egal-next`. This means we only load in images as we need them.
 
 
