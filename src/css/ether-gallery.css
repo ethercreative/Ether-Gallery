@@ -51,7 +51,7 @@
   max-width: 90%;
   max-height: 90%;
 }
-.egal-ul li.egal-after-next {
+.egal-ul li.egal-next ~ li {
   left: 100%;
   z-index: -1;
 }

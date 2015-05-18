@@ -116,8 +116,6 @@
 			prevImage.addClass('egal-prev').find('img').attr('src', prevImage.data('image'));
 			nextImage.addClass('egal-next').find('img').attr('src', nextImage.data('image'));
 
-			nextImage.nextAll().addClass('egal-after-next');
-
 			// Fade in on image load
 			t.ul.find('li').find('img').on('load', function () {
 				$(this).parent().css('opacity', 1);
@@ -130,8 +128,7 @@
 				t.ul.find('li')
 					.removeClass('egal-active')
 					.removeClass('egal-next')
-					.removeClass('egal-prev')
-					.removeClass('egal-after-next');
+					.removeClass('egal-prev');
 
 				newPrev.addClass('egal-prev').find('img').attr('src', newPrev.data('image'));
 				newNext.addClass('egal-next').find('img').attr('src', newNext.data('image'));
