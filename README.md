@@ -43,7 +43,6 @@ $('.gallery').etherGallery({
 - `.egal-active` The active list item
 - `.egal-prev` The previous list item
 - `.egal-next` The next list item
-- `.egal-after-next` All list items after the next list item
 
 
 ### Lazy Loading
